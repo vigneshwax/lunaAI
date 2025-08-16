@@ -1,22 +1,3 @@
-import streamlit as st
-
-# Define your password (for local testing)
-PASSWORD = "mypassword"  # change this to whatever you want
-
-# Ask user for password
-if 'auth' not in st.session_state:
-    st.session_state.auth = False
-
-if not st.session_state.auth:
-    user_pass = st.text_input("Enter password to access AI Agent:", type="password")
-    if user_pass == PASSWORD:
-        st.session_state.auth = True
-        st.success("Access granted ✅")
-    elif user_pass:
-        st.error("Incorrect password ❌")
-    st.stop()  # stop the app until correct password
-
-
 
 
 import streamlit as st
